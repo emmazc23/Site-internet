@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Newsreader:ital,wght@0,400;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-beige: #fdf8f8;
+  --color-brand-charcoal: #1c1b1b;
+  --color-brand-sage: #78887c;
+  --color-brand-clay: #695c51;
+  --color-brand-sand: #f1edec;
+
+  --font-display: "Noto Serif", serif;
+  --font-body: "Newsreader", serif;
+  --font-ui: "Manrope", sans-serif;
+
+  --spacing-margin-edge: 64px;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-beige text-brand-charcoal font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
